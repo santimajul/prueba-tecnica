@@ -1,38 +1,348 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*BARRA DE NAVEGACION (NAVBAR)*/
+
+.navbar{
+    width: 100%;
+    min-height: 10vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    color: #fff;
+    background-color: #007dfe;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*DEMO Streaming*/
+.navbar-brand{
+    font-size: 2rem;
+    width: 20%;
+    padding-left: 8.3%;
+    text-shadow: 1.5px 1.5px #1e1e1e;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-brand:hover{
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a{
+    text-decoration: none;
+    background-color: #007dfe;
 }
+
+/*LOG IN AND START*/
+
+.btn-container{
+    width: 20%;
+    background-color: #007dfe;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 8.3%;
+}
+
+.navbar .start{
+    background-color: #1e1e1e;
+    font-size: .85rem;
+    padding: .7rem;
+    margin-left: 10px;
+}
+
+.subtitle-container{
+    width: 91.7%;
+    height: 10vh;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8.3%;
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+/*POPULAR TITLES/SERIES/MOVIES*/
+.subtitle{
+    font-size: 1.8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e;
+}
+
+/*RELEASE YEAR FILTER*/
+
+.form{
+    width: 16%;
+    color: #fff;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 20%;
+    visibility: hidden;
+}
+
+.form p{
+    color: #fff;
+    background-color: #1e1e1e;
+    font-size: .9rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-btn{
+    height: 22px;
+    width: 50px;
+    background-color: #007dfe;
+    color: #fff;
+    font-size: .8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: .1rem .5rem;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form-btn:hover{
+    cursor: pointer;
+    height: 25px;
+    text-decoration: underline;
+
+
+}
+
+/*SERIES/MOVIES CONTAINER*/
+
+.main{
+    max-width: 100%;
+    min-height: 42vh;
+    padding: 2% 5%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*FOOTER*/
+.pie{
+    width: 91.7%;
+    height: 30%;
+    padding-left: 8.3%;
+    background-color: #1e1e1e;
+    bottom: 0;
+}
+
+.list-options{
+    list-style:none;
+    margin: 2rem 0 1rem 0;
+    color: white;
+    background-color: #1e1e1e;
+    font-size: .8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.list-options li{
+    padding: .1rem 1rem ;
+    border-left: 1px solid #fff;
+    background-color: #1e1e1e;
+    min-width: 4%;
+}
+.list-options .first-option{
+    padding-left: 0;
+    border: none;
+}
+.list-options .first-option:hover{
+    cursor: pointer;
+}
+
+.pie p{
+    font-size: .8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #1e1e1e;
+}
+
+/*SOCIAL-MEDIA LINKS*/
+
+.icons-rutas-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding-top: 1.5rem;
+}
+
+.pie .icons{
+    min-width: 70px;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+
+}
+.pie .icons svg{
+    min-width: 20px;
+    background-color: #1e1e1e;
+}
+.rutas{
+    width: 40%;
+    padding-right: 10%;
+    background-color: #1e1e1e;
+}
+
+.pie .rutas svg{
+    background-color: #1e1e1e;
+    margin: 1rem;
+}
+
+/*CARDS*/
+
+.card-container{
+    height: 200px;
+    min-width: 90px;
+    width: 10%;
+    margin: 1%;
+}
+
+.card-container:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.space{
+    height: 80%;
+    width: 100%;
+}
+
+.space img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-image: url('./descarga.png');
+}
+
+.card-description{
+    height: 20%;
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: center;
+    color: #1e1e1e;
+    background-color: #fff;
+}
+
+/*MODAL WINDOW*/
+
+.back{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.modal{
+    height: 60%;
+    min-width: 250px;
+    width: 25%;
+    background-color: #007dfe;
+    color: #1e1e1e;
+    padding:1% 3% 3% 3%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    box-shadow: #1e1e1e 10px 10px 10px;
+}
+
+.modal .titulo{
+    height: 15%;
+    width: 100%;
+    background-color: #007dfe;
+    color: #1e1e1e;
+    display: flex;
+    padding: 2% 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal .titulo h1{
+    color: #1e1e1e;
+    background-color: #007dfe;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.modal .titulo h3{
+    color: #1e1e1e;
+    background-color: #007dfe;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.modal .principal-container{
+    height: 70%;
+    width: 100%;
+    background-color: #007dfe;
+    color: #1e1e1e;
+}
+
+.modal .principal-container .image{
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+.modal .principal-container .image img{
+    height: 100%;
+    width: 100%;
+}
+
+.modal .principal-container .description{
+    height: 100%;
+    width: 50%;
+    float: left;
+    color: #1e1e1e;
+    background-color: #007dfe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .principal-container .description h3{
+    padding: 0 5%;
+    color: #1e1e1e;
+    background-color: #007dfe;
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.modal .leave-btn-container{
+    height: 15%;
+    width: 100%;
+    background-color: #007dfe;
+    color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .leave-btn{
+    background-color: #1e1e1e;
+    color: #fff;
+    margin-top: 5%;
+    height: 80%;
+    width: 50%;
+}
+
+
+
+
+
